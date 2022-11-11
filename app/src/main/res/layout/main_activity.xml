@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017 Google, Inc.
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:fitsSystemWindows="true"
+    android:visibility="visible"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="KIDSLOCATOR.RU" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="393dp"
+        android:clickable="false"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            style="@android:style/Widget.CompoundButton.CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:duplicateParentState="false"
+            android:focusable="auto"
+            android:gravity="center"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/rules"
+            android:textColor="#0C1B70"
+            android:textColorHighlight="#6A6767"
+            android:textColorLink="#1B0E0E"
+            android:visibility="visible" />
+
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:ems="10"
+            android:enabled="false"
+            android:gravity="center"
+            android:hint="@string/id_telegram"
+            android:inputType="number"
+            android:maxLength="14"
+            android:minLines="6"
+            android:textColor="#185FED"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorLink="#24EF2C"
+            app:layout_anchorGravity="center" />
+
+        <Button
+            android:id="@+id/start_updates_button"
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:fadeScrollbars="false"
+            android:onClick="startUpdatesButtonHandler"
+            android:text="@string/start_updates" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/link2"
+            android:textColor="#185FED" />
+        +
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/link"
+            android:textColor="#185FED" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/link2"
+            android:textColor="#185FED" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/link3"
+            android:textColor="#185FED" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="261dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/link2"
+            android:textColor="#185FED" />
+
+        <Button
+            android:id="@+id/start_updates_button2"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:fadeScrollbars="false"
+            android:onClick="startUpdatesButtonHandler"
+            android:text="@string/mammycall" />
+
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="219dp"
+            android:layout_height="102dp"
+            android:visibility="invisible"
+            tools:visibility="invisible" />
+
+        +
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

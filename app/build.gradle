@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId 'kidslocator.ru'
+        minSdkVersion 17
+        targetSdk 29
+        versionCode 1
+        versionName '1.9.0.9'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildToolsVersion '29.0.3'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.3.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    testImplementation 'junit:junit:4.13.1'
+
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.google.android.gms:play-services-location:17.1.0'
+}
